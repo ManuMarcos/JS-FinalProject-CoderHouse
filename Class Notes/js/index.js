@@ -22,12 +22,28 @@ while (usuarioIngresado != usuarioAceptado){
 alert("Usuario correcto, ingresando..") */
 
 //DO WHILE
-do{
+/* do{
     numero = prompt("Ingrese un numero");
-}while(parseInt(numero));
+}while(parseInt(numero)); */
 
+//SWITCH
 
+/* let nacionalidadUsuario = prompt("Ingrese su nacionalidad:");
 
+switch (nacionalidadUsuario){
+    case "Colombiano":
+        console.log("Su moneda es el peso colombiano");
+        break;
+    case "Argentino":
+        console.log("Su moneda es el peso argentino");
+        break;
+    default:
+        console.log("El usuario tiene nacionalidad no soportada")
+        break;
+} */
 
-
-
+string = prompt("Por favor ingresa una palabra:")
+while(string != "Terminar"){
+    /* stringConcatenado += string; */
+    string = prompt("Por favor ingresa una palabra:");
+}
