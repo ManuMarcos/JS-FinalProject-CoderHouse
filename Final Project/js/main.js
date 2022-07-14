@@ -1,6 +1,3 @@
-/* function generarSolicitud{
-
-} */
 
 function login(){
     //Estos datos se deberian obtener con el simple login del usuario
@@ -14,6 +11,7 @@ function login(){
     return usuario;
 }
 
+
 class Usuario{
     constructor(nombre, apellido, interno, correo, celular, sector){
         this.nombre = nombre;
@@ -22,6 +20,7 @@ class Usuario{
         this.correo = correo;
         this.celular = celular;
         this.sector = sector;
+        this.tickets = [];
         this.equipos = [];
         this.licencias = [];
     }
@@ -32,6 +31,10 @@ class Usuario{
 
     asingarLicencia(licencia){
         this.licencias.push(licencia);
+    }
+
+    asignarTicket (ticket){
+        this.tickets.push(ticket);
     }
 
     mostrarDatos(){
@@ -117,26 +120,24 @@ class Inventario{
     constructor(){
         this.equipos = [];
         this.licencias = [];
+        this.cantEquipos = 0;
+        this.cantLicencias = 0;
     }
 
     agregarEquipo(equipo){
         this.equipos.push(equipo);
+        this.cantEquipos += 1;
     }
 
     agregarLicencia(licencia){
         this.licencias.push(licencia);
+        this.cantLicencias += 1;
     }
 
-    buscarEquipo(tipo, user){
-        alert("HOLA");
-        const hayDisponibles = (this.equipos).some((el) => el.tipo == tipo);
-        if (hayDisponibles == false){
-            alert(`No hay ${tipo} disponibles en el invetario`)
-        }
-        else{
-            const equiposDisponibles = (this.equipos).filter((el) => el.tipo == tipo);
-            elegirItem(equiposDisponibles);
-        }
+    buscarEquipo(tipo){
+        equipoAsignado = this.equipos.find((el) => el.equipo.nombre == tipo);
+        alert(equipoAsignado);
+        return equipoAsignado;
     }
 }
 
@@ -188,18 +189,25 @@ function menu(user, inventario){
                 selectedHardware = prompt("Por favor seleccione el tipo de hardware: \n 1. PC \n 2. Monitor \n 3. Teclado \n 4. Mouse")
                 switch(selectedHardware){
                     case 1: //PC
-                        selectedHardware = "pc"
-                        let pcsDisponibles = inventario.buscarEquipo(selectedHardware,user); //Busco las pcs en el inventario
-                        alert(pcsDisponibles);
+                        selectedHardware = "pc";
+                        equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
+                        user.asignarEquipo(equipoAsignado);
+                        user.mostrarEquipos;
                     case 2: //Monitor
                         selectedHardware = "monitor"
-                        let monitoresDisponibles = inventario.buscarEquipo(selectedHardware); //Busco monitores en el inventario
+                        equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
+                        user.asignarEquipo(equipoAsignado);
+                        user.mostrarEquipos;
                     case 3: //Teclado
                         selectedHardware = "teclado"
-                        let tecladosDisponibles = inventario.buscarEquipo(selectedHardware); //Busco teclados disponibles en el inventario
+                        equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
+                        user.asignarEquipo(equipoAsignado);
+                        user.mostrarEquipos;
                     case 4: //Mouse
                         selectedHardware = "mouse"
-                        let mousesDisponibles = inventario.buscarEquipo(selectedHardware); //Busco mouses disponibles en el inventario
+                        equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
+                        user.asignarEquipo(equipoAsignado);
+                        user.mostrarEquipos;
                 }
             }
             else{//Software
@@ -261,10 +269,34 @@ inventario.agregarEquipo(monitor4)
 
 
 
+function imprimirInventario(inventario){
+    screenMessage = ``;
+    equiposDisponibles = inventario.equipos;
+    for (let i = 0; i < inventario.cantEquipos; i++){
+        screenMessage += `
+        Tipo: ${equiposDisponibles[i].tipo}
+        -----------------------------------------`
+        /* Modelo: ${equiposDisponibles[i].modelo}
+        Marca: ${equiposDisponibles[i].marca}
+        Precio: ${equiposDisponibles[i].precio}
+        Garantia: ${equiposDisponibles[i].garantia} 
+        ---------------------------------------------`*/
+    }
+    alert(screenMessage)
+    /* for (const equipo of inventario.equipos){
+        alert(equipo.modelo)
+    } */
+    /* alert((inventario.equipos).lenght); */
+}
+
+
+
 function main(){
     user = login(); //Retorna objeto usuario con sus propiedades (nombre, apellido, interno, correo, celular, sector)
     /* inventario = cargarInventario(); */
+    imprimirInventario(inventario);
     menu(user, inventario); 
+    
 }
 
 function elegirItem(listaEquipos, user){
