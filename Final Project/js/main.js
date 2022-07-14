@@ -135,10 +135,11 @@ class Inventario{
     }
 
     buscarEquipo(tipo){
-        equipoAsignado = this.equipos.find((el) => el.equipo.nombre == tipo);
-        alert(equipoAsignado);
-        return equipoAsignado;
+        tipo = "pc";
+        const equiposDisponibles = this.equipos.filter(equipo => equipo.tipo.includes(tipo));
+        return equiposDisponibles;
     }
+
 }
 
 
@@ -186,28 +187,34 @@ function menu(user, inventario){
                 selectedOrder = prompt("Opcion incorrecta \n Selecciona una opcion: \n 1.Hardware \n 2.Software").toLowerCase();
             }
             if (selectedOrder == "1"){//Hardware
-                selectedHardware = prompt("Por favor seleccione el tipo de hardware: \n 1. PC \n 2. Monitor \n 3. Teclado \n 4. Mouse")
+                let selectedHardware = parseInt(prompt("Por favor seleccione el tipo de hardware: \n 1. PC \n 2. Monitor \n 3. Teclado \n 4. Mouse"));
                 switch(selectedHardware){
                     case 1: //PC
+                        alert("HOLA")
                         selectedHardware = "pc";
-                        equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
-                        user.asignarEquipo(equipoAsignado);
-                        user.mostrarEquipos;
+                        const equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
+                        imprimiEquipos(equipoAsignado);
+                        /* user.asignarEquipo(equipoAsignado);
+                        user.mostrarEquipos(); */
+                        break;
                     case 2: //Monitor
                         selectedHardware = "monitor"
                         equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
                         user.asignarEquipo(equipoAsignado);
                         user.mostrarEquipos;
+                        break;
                     case 3: //Teclado
                         selectedHardware = "teclado"
                         equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
                         user.asignarEquipo(equipoAsignado);
                         user.mostrarEquipos;
+                        break;
                     case 4: //Mouse
                         selectedHardware = "mouse"
                         equipoAsignado = inventario.buscarEquipo(selectedHardware);//Busco las pcs en el inventario
                         user.asignarEquipo(equipoAsignado);
                         user.mostrarEquipos;
+                        break;
                 }
             }
             else{//Software
@@ -266,6 +273,14 @@ let monitor3 = new Equipo("monitor", "f390", "samsung", "W247RU5H", 12/2024, 45.
 inventario.agregarEquipo(monitor3)
 let monitor4 = new Equipo("monitor", "f390", "samsung", "r4VTDEXo", 12/2024, 45.000 )
 inventario.agregarEquipo(monitor4)
+
+function imprimiEquipos(listaEquipos){
+    listaEquipos.forEach((equipo) => {
+        alert(equipo.marca)
+    })
+}
+
+
 
 
 
