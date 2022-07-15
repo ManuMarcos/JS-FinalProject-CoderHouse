@@ -22,7 +22,6 @@ class Usuario{
     agregarEquipo(equipo){
         this.equipos.push(equipo);
         alert("Equipo agregado exitosamente")
-        alert(this.equipos);
     }
 
     agregarLicencia(licencia){
