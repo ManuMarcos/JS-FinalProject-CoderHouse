@@ -1,6 +1,6 @@
 class Usuario{
     constructor(nombre, apellido, interno, sector){
-        this.nombre = nombre;
+        this.nombre = nombre; 
         this.apellido = apellido;
         this.interno = interno;
         this.sector = sector;
@@ -22,24 +22,33 @@ class Usuario{
     agregarEquipo(equipo){
         this.equipos.push(equipo);
         alert("Equipo agregado exitosamente")
+        alert(this.equipos);
     }
 
     agregarLicencia(licencia){
         this.licencias.push(licencia);
         alert("Licencia agregada exitosamente")
     }
+
+    mostrarEquipos(){
+        let mensaje = `EQUIPOS EN TU INVENTARIO:\n`;
+        for (const equipo of this.equipos){
+            mensaje += `Categoria: ${equipo.categoria}, Marca: ${equipo.marca}, Modelo: ${equipo.modelo}, Nro de serie: ${equipo.nroDeSerie}, Precio: ${equipo.precio}\n---------------------------------------\n`;
+        }
+        alert(mensaje);
+    }
 }
 
 class Equipo{
     constructor(categoria, marca, modelo, nroDeSerie, precio){
-        this.categoria = categoria;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.nroDeSerie = nroDeSerie;
+        this.categoria = categoria.toUpperCase();
+        this.marca = marca.toUpperCase();
+        this.modelo = modelo.toUpperCase();
+        this.nroDeSerie = nroDeSerie.toUpperCase();
         this.precio = parseInt(precio);
     }
 
-    mostrarDatos(){
+    mostrarDatosVertical(){
         alert(`
             Categoria: ${this.categoria}
             Marca: ${this.marca}
@@ -47,6 +56,10 @@ class Equipo{
             Nro de serie: ${this.nroDeSerie}
             Precio: $${this.precio}
         `)
+    }
+
+    mostrarDatosHorizontal(){
+        alert(`Categoria: ${this.categoria}, Marca: ${this.marca}, Modelo: ${this.modelo}, Precio: $${this.precio}`)
     }
 }
 
@@ -65,23 +78,22 @@ class Inventario{
     }
 
     obtenerPcs(){
-        const pcs = this.equipos.filter(equipo => equipo.categoria === "pc");
+        const pcs = this.equipos.filter(equipo => equipo.categoria === "PC")
         return pcs;
     }
 
     obtenerMonitores(){
-        const monitores = this.equipos.filter(equipo => equipo.categoria.includes("monitor"));
-        alert(monitores);
+        const monitores = this.equipos.filter(equipo => equipo.categoria === "MONITOR");
         return monitores;
     }
 
     obtenerTeclados(){
-        const teclados = this.equipos.filter(equipo => equipo.tipo.includes("teclado"));
+        const teclados = this.equipos.filter(equipo => equipo.categoria === "TECLADO");
         return teclados;
     }
 
     obtenerMouses(){
-        const mouses = this.equipos.filter(equipo => equipo.tipo.includes("mouse"));
+        const mouses = this.equipos.filter(equipo => equipo.categoria === "MOUSE");
         return mouses;
     }
 
@@ -116,11 +128,7 @@ function main(inventario){
 function menu(usuario, inventario){
     const opcionesDisponibles = [1,2,3,4];
     let finalizar = false;
-    const mensajeOpciones = `
-        1. Generar un ticket (Incidente, Cambio, Capacitacion)
-        2. Solicitar Hardware/Software
-        3. Ver estado de servidores
-        4. Finalizar`
+    const mensajeOpciones = `1. Generar un ticket (Incidente, Cambio, Capacitacion)\n2. Solicitar Hardware/Software\n3. Ver estado de servidores\n4. Finalizar`
     while (finalizar == false){
         let opcionSeleccionada = parseInt(prompt(mensajeOpciones))
         while (!opcionesDisponibles.includes(opcionSeleccionada)){
@@ -130,20 +138,19 @@ function menu(usuario, inventario){
         switch(opcionSeleccionada){
             case 1:
                 //Generar Ticket
-                alert("opcion 1")
+                alert("Opcion no disponible en este momento")
                 break;
             case 2:
                 //Solicitar Hardware o software
-                alert("opcion 2")
                 hardwareOSoftware(usuario,inventario);
                 break;
             case 3:
                 //Ver estado de servidores
-                alert("opcion 3")
+                alert("Opcion no disponible en este momento")
                 break;
             case 4:
                 //Finalizar
-                alert("opcion 4")
+                alert("Hasta luego!!")
                 finalizar = true;
                 break;
         }
@@ -153,9 +160,7 @@ function menu(usuario, inventario){
 
 function hardwareOSoftware(usuario, inventario){
     const opcionesDisponibles = [1, 2]
-    const mensaje = `
-    1. Hardware
-    2. Software`
+    const mensaje = `1. Hardware\n2. Software`
     opcionSeleccionada = parseInt(prompt(mensaje));
     while(!opcionesDisponibles.includes(opcionSeleccionada)){
         alert("Opcion fuera de rango");
@@ -164,23 +169,18 @@ function hardwareOSoftware(usuario, inventario){
     switch(opcionSeleccionada){
         case 1:
             //Hardware
-            alert("Cargo hardware")
             categoriasHardware(usuario, inventario);
             break;
         case 2:
             //Software
-            alert("Cargo software")
+            alert("Opcion no disponible en este momento")
             break;
     }
 }
 
 function categoriasHardware(usuario, inventario){
     const opcionesDisponibles = [1, 2, 3, 4];
-    const mensaje = `
-    1. Pc
-    2. Teclado
-    3. Mouse
-    4. Monitor`
+    const mensaje = `1. Pc\n2. Teclado\n3. Mouse\n4. Monitor`
     opcionSeleccionada = parseInt(prompt(mensaje));
     while(!opcionesDisponibles.includes(opcionSeleccionada)){
         alert("Opcion fuera de rango");
@@ -190,24 +190,50 @@ function categoriasHardware(usuario, inventario){
         case 1:
             //PC
             const pcs = inventario.obtenerPcs();
+            equipoSeleccionado = seleccionarEquipo(pcs);
+            usuario.agregarEquipo(equipoSeleccionado);
+            usuario.mostrarEquipos();
             break;
         case 2:
             //Teclado
-            teclados = inventario.obtenerTeclados();
-            alert(teclados)
+            const teclados = inventario.obtenerTeclados();
+            equipoSeleccionado = seleccionarEquipo(teclados);
+            usuario.agregarEquipo(equipoSeleccionado);
+            usuario.mostrarEquipos();
             break;
         case 3:
             //Mouse
-            mouses= inventario.obtenerMouses();
-            alert(mouses)
+            const mouses = inventario.obtenerMouses();
+            equipoSeleccionado = seleccionarEquipo(mouses);
+            usuario.agregarEquipo(equipoSeleccionado);
+            usuario.mostrarEquipos();
             break;
         case 4:
             //Monitor
-            monitores = inventario.obtenerMonitores();
-            alert(monitores)
+            const monitores = inventario.obtenerMonitores();
+            equipoSeleccionado = seleccionarEquipo(monitores);
+            usuario.agregarEquipo(equipoSeleccionado);
+            usuario.mostrarEquipos();
             break;
     }
 }
+
+function seleccionarEquipo(equipos){
+    let mensaje = ``;
+    let contador = 1;
+    for (equipo of equipos){
+        mensaje += `${contador}. Marca: ${equipo.marca}, Modelo: ${equipo.modelo}, Precio: ${equipo.precio}\n`;
+        contador += 1;
+    }
+    let opcionSeleccionada = parseInt(prompt(mensaje + "\nSeleccione el equipo deseado:")) - 1;
+    return equipos[opcionSeleccionada];
+}
+
+
+
+
+
+
 
 
 //Modularizacion de la validacion de opciones ingresadas
