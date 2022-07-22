@@ -107,10 +107,10 @@ class Login{
     }
 
     efectuarLogin(){
-        let nombre = prompt("Nombre:");
-        let apellido = prompt("Apellido");
-        let interno = prompt("Interno:");
-        let sector = prompt("Sector:");
+        let nombre = document.getElementById("login_name");
+        let apellido = document.getElementById("login_surname");
+        let interno = document.getElementById("login_phone");
+        let sector = document.getElementById("login_sector");
 
         const usuario = new Usuario(nombre, apellido, interno, sector);
         return usuario;
@@ -227,10 +227,6 @@ function seleccionarEquipo(equipos){
     let opcionSeleccionada = parseInt(prompt(mensaje + "\nSeleccione el equipo deseado:")) - 1;
     return equipos[opcionSeleccionada];
 }
-
-
-
-
 
 
 
