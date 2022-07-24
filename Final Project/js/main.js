@@ -112,16 +112,54 @@ class Login{
         let interno = document.getElementById("login_phone");
         let sector = document.getElementById("login_sector");
 
-        const usuario = new Usuario(nombre, apellido, interno, sector);
-        return usuario;
+        
+        let boton = document.getElementById("login_button");
+        let form = document.getElementById("login_form");
+        let error = false;
+        
+        boton.onclick = (e) => {
+            if (nombre.value == "" || apellido.value == "" || interno.value == ""){
+                e.preventDefault();
+                let alerta = document.createElement("p");
+                alerta.innerHTML = "<h6>Por favor completar todos los campos</h6>";
+                console.log(form.lastChild);
+                if (error == false){
+                    form.appendChild(alerta);
+                }
+                error = true;
+            }
+            else{
+                console.log("Login exitoso!!");
+                const usuario = new Usuario(nombre, apellido, interno, sector);
+                console.log("usuario creado")
+                return usuario;
+            }
+        };
+        
     }
 }
+
+function validarFormulario(nombre, apellido, interno){
+    if(nombre.value == "" || apellido.value == "" || interno.value == ""){
+        let form = document.getElementById("login_form");
+        let alerta = document.createElement("p");
+        alerta.innerHTML = "<h6>Por favor completar todos los campos</h6>"
+        form.append(alerta);
+    }
+
+    else{
+        console.log("HOLA")
+    }
+        
+}
+
+
 
 function main(inventario){
     const login = new Login();
     const usuario = login.efectuarLogin();
-    usuario.mostrarDatos();
-    menu(usuario, inventario);
+    /* usuario.mostrarDatos(); */
+    /* menu(usuario, inventario); */
 }
 
 function menu(usuario, inventario){
