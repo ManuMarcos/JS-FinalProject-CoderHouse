@@ -1,106 +1,3 @@
-class Usuario{
-    constructor(nombre, apellido, interno, sector){
-        this.nombre = nombre; 
-        this.apellido = apellido;
-        this.interno = interno;
-        this.sector = sector;
-        this.equipos = [];
-        this.licencias = [];
-    }
-
-    mostrarDatos(){
-        alert(`
-            --------------------------
-            Nombre: ${this.nombre}
-            Apellido: ${this.apellido}
-            Interno: ${this.interno}
-            Sector: ${this.sector}
-            --------------------------
-        `)
-    }
-
-    agregarEquipo(equipo){
-        this.equipos.push(equipo);
-        alert("Equipo agregado exitosamente")
-    }
-
-    agregarLicencia(licencia){
-        this.licencias.push(licencia);
-        alert("Licencia agregada exitosamente")
-    }
-
-    mostrarEquipos(){
-        let mensaje = `EQUIPOS EN TU INVENTARIO:\n`;
-        for (const equipo of this.equipos){
-            mensaje += `Categoria: ${equipo.categoria}, Marca: ${equipo.marca}, Modelo: ${equipo.modelo}, Nro de serie: ${equipo.nroDeSerie}, Precio: ${equipo.precio}\n---------------------------------------\n`;
-        }
-        alert(mensaje);
-    }
-}
-
-class Equipo{
-    constructor(categoria, marca, modelo, nroDeSerie, precio){
-        this.categoria = categoria.toUpperCase();
-        this.marca = marca.toUpperCase();
-        this.modelo = modelo.toUpperCase();
-        this.nroDeSerie = nroDeSerie.toUpperCase();
-        this.precio = parseInt(precio);
-    }
-
-    mostrarDatosVertical(){
-        alert(`
-            Categoria: ${this.categoria}
-            Marca: ${this.marca}
-            Modelo: ${this.modelo}
-            Nro de serie: ${this.nroDeSerie}
-            Precio: $${this.precio}
-        `)
-    }
-
-    mostrarDatosHorizontal(){
-        alert(`Categoria: ${this.categoria}, Marca: ${this.marca}, Modelo: ${this.modelo}, Precio: $${this.precio}`)
-    }
-}
-
-class Inventario{
-    constructor(){
-        this.equipos = [];
-        this.licencias = [];
-    }
-
-    agregarEquipo(equipo){
-        this.equipos.push(equipo);
-    }
-
-    agregarLicencia(licencia){
-        this.licencias.push(licencia);
-    }
-
-    obtenerPcs(){
-        const pcs = this.equipos.filter(equipo => equipo.categoria === "PC")
-        return pcs;
-    }
-
-    obtenerMonitores(){
-        const monitores = this.equipos.filter(equipo => equipo.categoria === "MONITOR");
-        return monitores;
-    }
-
-    obtenerTeclados(){
-        const teclados = this.equipos.filter(equipo => equipo.categoria === "TECLADO");
-        return teclados;
-    }
-
-    obtenerMouses(){
-        const mouses = this.equipos.filter(equipo => equipo.categoria === "MOUSE");
-        return mouses;
-    }
-
-}
-
-
-
-
 class Login{
     constructor(){
         let user;
@@ -117,48 +14,35 @@ class Login{
         let form = document.getElementById("login_form");
         let error = false;
         
+        const usuario = new Usuario(nombre.value, apellido.value, interno.value, sector.value);
+
         boton.onclick = (e) => {
-            if (nombre.value == "" || apellido.value == "" || interno.value == ""){
+            if (nombre.value == "" || apellido.value == "" || interno.value == "" || sector.value == ""){
                 e.preventDefault();
                 let alerta = document.createElement("p");
                 alerta.innerHTML = "<h6>Por favor completar todos los campos</h6>";
+                alerta.classList.add("msj_alerta");
                 console.log(form.lastChild);
                 if (error == false){
                     form.appendChild(alerta);
                 }
                 error = true;
             }
-            else{
-                console.log("Login exitoso!!");
-                const usuario = new Usuario(nombre, apellido, interno, sector);
-                console.log("usuario creado")
-                return usuario;
-            }
+            
         };
-        
+
+        return usuario;
     }
 }
-
-function validarFormulario(nombre, apellido, interno){
-    if(nombre.value == "" || apellido.value == "" || interno.value == ""){
-        let form = document.getElementById("login_form");
-        let alerta = document.createElement("p");
-        alerta.innerHTML = "<h6>Por favor completar todos los campos</h6>"
-        form.append(alerta);
-    }
-
-    else{
-        console.log("HOLA")
-    }
-        
-}
-
-
-
+    
 function main(inventario){
     const login = new Login();
     const usuario = login.efectuarLogin();
-    /* usuario.mostrarDatos(); */
+    alert('hola')
+    console.log(usuario.nombre);
+    console.log(usuario.apellido);
+    console.log(usuario.interno);
+    console.log(usuario.sector);
     /* menu(usuario, inventario); */
 }
 
@@ -265,23 +149,6 @@ function seleccionarEquipo(equipos){
     let opcionSeleccionada = parseInt(prompt(mensaje + "\nSeleccione el equipo deseado:")) - 1;
     return equipos[opcionSeleccionada];
 }
-
-
-
-
-//Modularizacion de la validacion de opciones ingresadas
-/* function solicitarOpcion (cantOpciones, mensaje){
-    let opcionesDisponibles = [];
-    for (let i = 1; i <= cantOpciones; i++){
-        opcionesDisponibles.push(i);
-    }
-    alert(opcionesDisponibles);
-    let opcionSeleccionada = parseInt(prompt(mensaje));
-    while(!opcionesDisponibles.includes(opcionSeleccionada)){
-        opcionSeleccionada = parseInt(prompt(mensaje));
-    } 
-    return opcionSeleccionada;
-} */
 
 //Cargamos inventario
 const inventario = new Inventario();
