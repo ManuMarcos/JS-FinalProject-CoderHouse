@@ -1,3 +1,6 @@
+export {Inventario};
+
+
 class Inventario{
     constructor(){
         this.equipos = [];

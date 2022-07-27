@@ -1,3 +1,7 @@
+export {Usuario};
+
+
+
 
 class Usuario{
     constructor(nombre, apellido, interno, sector){

@@ -1,3 +1,7 @@
+export {Equipo};
+
+
+
 class Equipo{
     constructor(categoria, marca, modelo, nroDeSerie, precio){
         this.categoria = categoria.toUpperCase();
