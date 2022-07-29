@@ -9,7 +9,7 @@ class Login{
     }
 
     efectuarLogin(){
-        let formulario = obtenerFormulario();
+        let formulario = document.getElementById("login-form")
         formulario.addEventListener("submit", validarFormulario);
     }
 }

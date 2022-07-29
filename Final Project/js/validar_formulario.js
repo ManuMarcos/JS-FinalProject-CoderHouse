@@ -42,6 +42,9 @@ function validarFormulario(event){
     //It validates that each variable is correct
     if (isValid === true){
         let user = new Usuario(userName.value, userSurname.value, userPhone.value, userSector.value);
+        const userJson = JSON.stringify(user);
+        localStorage.setItem("user",userJson);
+        console.log(userJson);
         user.mostrarDatos();
         window.location = "/html/main.html"
         return user;
