@@ -1,6 +1,8 @@
+$header-color: #7171f0;
+
 .header{
     display: flex;
-    background-color: #7171f0;
+    background-color: $header-color;
     align-items: center; 
     justify-items: center;
     padding: 5px  0px;
