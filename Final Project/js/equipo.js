@@ -1,14 +1,13 @@
 export {Equipo};
 
-
-
 class Equipo{
-    constructor(categoria, marca, modelo, nroDeSerie, precio){
+    constructor(categoria, marca, modelo, nroDeSerie, precio, img){
         this.categoria = categoria.toUpperCase();
         this.marca = marca.toUpperCase();
         this.modelo = modelo.toUpperCase();
         this.nroDeSerie = nroDeSerie.toUpperCase();
         this.precio = parseInt(precio);
+        this.img = img;
     }
 
     mostrarDatosVertical(){

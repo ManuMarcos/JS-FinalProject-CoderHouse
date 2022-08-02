@@ -1,0 +1,27 @@
+#hwrequest{
+    background-color: red;
+}
+
+#cards-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content-box{
+    margin: 20px 20px;
+}
+
+.category-buttons{
+    margin: 15px;
+}
+
+.card-img-top{
+    width: 230px;
+}
+
+.card{
+    margin: 20px;
+    width: 250px;
+}
+

@@ -1,10 +1,27 @@
 $header-color: #7171f0;
 
+#index-header{
+    justify-content: center;
+}
+
 .header{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: $header-color;
-    align-items: center; 
-    justify-items: center;
     padding: 5px  0px;
-    justify-content: center; 
+
+    h1{
+        margin-left:20px;
+    }
+
+    a{ 
+        margin-right: 15px;
+    }
+
+    img{
+        width: 32px;
+    }
+    
 }

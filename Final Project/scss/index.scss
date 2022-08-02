@@ -1,8 +1,13 @@
-@import "header", "main";
+@import "header", "main","hwrequest";
 
-main{
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.center-items{
     height: 600px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,15 +17,41 @@ main{
     margin-top: 100px;
 }
 
-.col{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+
+#form-container{
+    background-color: $header-color;
+    border-radius: 12px;
+    box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
+
+    #login-form{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input{
+        justify-self: center;
+    }
+    
+    #login-submit{
+        margin: 10px 0px;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    h5{
+        color: white;
+        margin: 10px 0px;
+    }
+
+    #alert-box{
+        h5{
+            color:red;
+            text-shadow: 3px 1px 5px rgba(28,110,164,0.67);
+        }
+    }
 }
 
-#login_sector{
-    margin: 10px 0px;
-}
+
 
 .msj_alerta{
     margin: 5px 0 ;
@@ -33,24 +64,6 @@ main{
     padding: 0px;
 }
 
-#form-container{
-    background-color: $header-color;
-    border-radius: 12px;
-    box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
-    display: flex;
-    flex-direction: column;
-    
-    h5{
-        color: white;
-        margin: 10px 0px;
-    }
-
-    #user-sector{
-        margin: 10px 0px;
-    }     
-
-}
-
 .none{
     display: none;
 }
@@ -60,9 +73,3 @@ main{
     background-color: orange;
 }
 
-#alert-box{
-    h5{
-        color:red;
-        text-shadow: 3px 1px 5px rgba(28,110,164,0.67);
-    }
-}

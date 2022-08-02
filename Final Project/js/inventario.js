@@ -1,6 +1,5 @@
 export {Inventario};
 
-
 class Inventario{
     constructor(){
         this.equipos = [];
@@ -13,6 +12,14 @@ class Inventario{
 
     agregarLicencia(licencia){
         this.licencias.push(licencia);
+    }
+
+    obtenerEquipos(){
+        return this.equipos;
+    }
+
+    obtenerLicencias(){
+        return this.licencias;
     }
 
     obtenerPcs(){

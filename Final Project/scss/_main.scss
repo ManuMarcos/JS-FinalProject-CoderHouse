@@ -1,3 +1,11 @@
 #cards_container{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cards-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

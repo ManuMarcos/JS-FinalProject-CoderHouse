@@ -5,4 +5,3 @@ function obtenerFormulario(){
     let formulario = document.getElementById("login-form");
     return formulario;
 }
-
