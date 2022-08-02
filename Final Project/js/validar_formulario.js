@@ -1,5 +1,5 @@
 export {validarFormulario};
-import {Usuario} from "./usuario.js";
+import {Usuario} from "./classes/usuario.js";
 
 
 function validarFormulario(event){

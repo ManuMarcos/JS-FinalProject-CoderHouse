@@ -1,6 +1,6 @@
-import {Inventario} from "./inventario.js"
-import {Equipo} from "./equipo.js"
-import{Licencia} from "./licencia.js"
+import {Inventario} from "./classes/inventario.js"
+import {Equipo} from "./classes/equipo.js"
+import{Licencia} from "./classes/licencia.js"
 export {stock};
 
 function cargarInventario(){

@@ -20,11 +20,6 @@
   flex-direction: row;
   justify-content: space-evenly; }
 
-.cards-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
-
 #hwrequest {
   background-color: red; }
 
@@ -45,6 +40,9 @@
 .card {
   margin: 20px;
   width: 250px; }
+
+#cart {
+  background-color: red; }
 
 * {
   margin: 0px;

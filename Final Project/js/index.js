@@ -1,13 +1,25 @@
-import {Login} from "./login.js";
-import {Inventario} from "./inventario.js"
-import {Equipo} from "./equipo.js";
-import {Usuario} from "./usuario.js";
+import {Login} from "./classes/login.js";
+import {Inventario} from "./classes/inventario.js"
+import {Equipo} from "./classes/equipo.js";
+import {Usuario} from "./classes/usuario.js";
 
 
 
 function main(){
-    const login = new Login();
-    const usuario = login.efectuarLogin();
+    
+    const user = localStorage.getItem("user");
+
+    if (user === null){
+        const login = new Login();
+        const newUser = login.efectuarLogin();
+    }
+    else{
+        const login = new Login();
+        login.ingresarUsuario(JSON.parse(user));
+        window.location = "/html/main.html"
+    }
+
+    
     /* console.log(usuario.nombre);
     console.log(usuario.apellido);
     console.log(usuario.interno);

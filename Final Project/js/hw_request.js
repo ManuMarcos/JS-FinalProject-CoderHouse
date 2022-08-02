@@ -89,3 +89,9 @@ for (const button of buttons) {
         }
     })
 }
+
+
+
+let cart = document.getElementById("cart");
+
+/* cart.classList.add("none") */
