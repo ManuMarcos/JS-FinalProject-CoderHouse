@@ -1,7 +1,30 @@
-#cards_container{
+/* #cards_container{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+ */
 
+ * {
+    margin: 0px;
+    padding: 0px;
+ }
+
+.bg-color{
+    /* background-color: rgb(191, 215, 234); */
+    background-color: #b6ffff;
+}
+
+.main{
+    background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blur{
+    backdrop-filter: blur(8px);
+}
 

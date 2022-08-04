@@ -1,9 +1,15 @@
 @import "header", "main","hwrequest";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-*{
+$color1:rgb(191, 215, 234);
+
+
+* {
     margin: 0px;
     padding: 0px;
-}
+    font-family:'Oswald', sans-serif;
+    font-size: large;
+ }
 
 
 .center-items{
@@ -17,25 +23,39 @@
     margin-top: 100px;
 }
 
+.cards-container{
+    border-radius: 12px;
+    background-color: black;
+    box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
+    padding: 15px;
+}
+
+
+
 
 #form-container{
-    background-color: $header-color;
     border-radius: 12px;
+    background-color: black;
     box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
+    padding: 15px;
+
+    input{
+        padding: 2px;
+    }
 
     #login-form{
         display: flex;
         flex-direction: column;
     }
     
-    input{
-        justify-self: center;
-    }
-    
     #login-submit{
         margin: 10px 0px;
         align-self: center;
         justify-self: center;
+        background-color: whitesmoke;
+        color: black;
+        border-color: $color1;
+        border-width: 2px;
     }
     
     h5{
@@ -45,31 +65,19 @@
 
     #alert-box{
         h5{
-            color:red;
-            text-shadow: 3px 1px 5px rgba(28,110,164,0.67);
+            color:rgb(167, 7, 7);
         }
     }
 }
 
 
-
-.msj_alerta{
-    margin: 5px 0 ;
-    color: red;
-}
-
-.form-alert{
-    color: red;
-    margin: 0px;
-    padding: 0px;
-}
-
-.none{
-    display: none;
-}
-
-.form-error{
-    color:red;
-    background-color: orange;
+ .grid-container{
+    display: grid; 
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer"; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 10fr 1fr; 
 }
 

@@ -1,4 +1,4 @@
-$header-color: #7171f0;
+$header-color: #b6ffff;;
 
 #index-header{
     justify-content: center;
@@ -11,6 +11,7 @@ $header-color: #7171f0;
     align-items: center;
     background-color: $header-color;
     padding: 5px  0px;
+    border-bottom: 3px solid black;
 
     h1{
         margin-left:20px;
@@ -24,4 +25,4 @@ $header-color: #7171f0;
         width: 32px;
     }
     
-}
+} 

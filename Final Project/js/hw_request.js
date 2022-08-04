@@ -13,7 +13,7 @@ function imprimirInventario(inventario){
                 <h6>${hardware.marca}</h6>
                 <span class="card-text">${hardware.modelo}</span>
                 <p class="card-text">$${hardware.precio}</p>
-                <a href="#" class="btn btn-primary">Agregar</a>
+                <a  id=${hardware.marca} class="btn btn-primary btn-add-cart">Agregar</a>
             </div>`;
         cardsBox.appendChild(card);
     }
@@ -27,10 +27,12 @@ function imprimirInventario(inventario){
                 <h6>${licencia.type}</h6>
                 <span class="card-text">${licencia.renewal}</span>
                 <p class="card-text">$${licencia.price}</p>
-                <a href="#" class="btn btn-primary">Agregar</a>
+                <a  id=${licencia.softwareName} class="btn btn-primary btn-add-cart">Agregar</a>
             </div>`;
         cardsBox.appendChild(card);
     }
+    const btnsAddCart = document.querySelectorAll(".btn-add-cart");
+    agregarEventListener(btnsAddCart);
 }
 
 function hardwareToDom(inventario){
@@ -44,10 +46,12 @@ function hardwareToDom(inventario){
                 <h6>${hardware.marca}</h6>
                 <span class="card-text">${hardware.modelo}</span>
                 <p class="card-text">$${hardware.precio}</p>
-                <a href="#" class="btn btn-primary">Agregar</a>
+                <a  id=${hardware.marca} class="btn btn-primary btn-add-cart">Agregar</a>
             </div>`;
         cardsBox.appendChild(card);
     }
+    const btnsAddCart = document.querySelectorAll(".btn-add-cart");
+    agregarEventListener(btnsAddCart)
 }
 
 function softwareToDom(inventario){
@@ -61,10 +65,12 @@ function softwareToDom(inventario){
                 <h6>${licencia.type}</h6>
                 <span class="card-text">${licencia.renewal}</span>
                 <p class="card-text">$${licencia.price}</p>
-                <a href="#" class="btn btn-primary">Agregar</a>
+                <a  id=${licencia.softwareName} class="btn btn-primary btn-add-cart">Agregar</a>
             </div>`;
         cardsBox.appendChild(card);
     }
+    const btnsAddCart = document.querySelectorAll(".btn-add-cart");
+    agregarEventListener(btnsAddCart)
 }
 
 
@@ -94,4 +100,17 @@ for (const button of buttons) {
 
 let cart = document.getElementById("cart");
 
-/* cart.classList.add("none") */
+function agregarEventListener(btnsAddCart){
+    btnsAddCart.forEach(btn => {
+        btn.addEventListener("click", (event) => {
+            alert(`Agregaste el elemento ${event.target.id} al carrito `);
+        })
+    });
+    
+}
+
+
+
+
+
+
