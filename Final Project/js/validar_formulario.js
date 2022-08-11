@@ -5,7 +5,7 @@ import {Usuario} from "./classes/usuario.js";
 function validarFormulario(event){
     event.preventDefault();
 
-    const {userName, userSurname, userPhone, userSector} = event.target;
+    const {userName, userSurname, userPhone, userEmail, userSector} = event.target;
 
     let alertText = "";
     let isValid = true;
@@ -41,7 +41,7 @@ function validarFormulario(event){
 
     //It validates that each variable is correct
     if (isValid === true){
-        let user = new Usuario(userName.value, userSurname.value, userPhone.value, userSector.value);
+        let user = new Usuario(userName.value, userSurname.value, userPhone.value, userEmail.value, userSector.value);
         const userJson = JSON.stringify(user);
         localStorage.setItem("user",userJson);
         console.log(userJson);

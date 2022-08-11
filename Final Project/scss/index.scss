@@ -1,43 +1,56 @@
-@import "header", "main","hwrequest";
+@import "header", "main","hwrequest","footer","tickets","modal";
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-$color1:rgb(191, 215, 234);
+$color1:#b6ffff;
+$color2: rgb(255, 64, 109);
 
-
+//Reset CSS + Font styles
 * {
     margin: 0px;
     padding: 0px;
     font-family:'Oswald', sans-serif;
     font-size: large;
+    box-sizing: border-box;
  }
 
 
-.center-items{
+ body{
+    min-height: 100vh;
+ }
+
+
+/* .center-items{
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-#cards_container{
+
+/* #cards_container{
     margin-top: 100px;
-}
+} */
 
-.cards-container{
-    border-radius: 12px;
-    background-color: black;
-    box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
-    padding: 15px;
+.hide{
+    display: none;
 }
 
 
+/* .color2{
+    color: $color2 !important;
+} */
 
+.bg-image-1{
+    background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png);
+}
 
 #form-container{
     border-radius: 12px;
     background-color: black;
     box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
     padding: 15px;
+    height: fit-content;
+    margin-top: 3rem ;
 
     input{
         padding: 2px;
@@ -70,14 +83,4 @@ $color1:rgb(191, 215, 234);
     }
 }
 
-
- .grid-container{
-    display: grid; 
-    grid-template-areas: 
-      "header"
-      "main"
-      "footer"; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 10fr 1fr; 
-}
 

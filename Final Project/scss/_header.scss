@@ -1,28 +1,17 @@
 $header-color: #b6ffff;;
 
-#index-header{
-    justify-content: center;
-}
-
 .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: $header-color;
-    padding: 5px  0px;
     border-bottom: 3px solid black;
+    height: 7vh;
+}
 
-    h1{
-        margin-left:20px;
-    }
 
-    a{ 
-        margin-right: 15px;
-    }
-    
-    img{
-        width: 32px;
-    }
-    
-} 
+.header__icon img{
+    height: 40px;
+}
+
+

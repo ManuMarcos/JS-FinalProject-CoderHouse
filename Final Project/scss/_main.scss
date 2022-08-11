@@ -1,30 +1,48 @@
-/* #cards_container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
+$color1:#b6ffff;
+
+/* 
  */
-
- * {
-    margin: 0px;
-    padding: 0px;
- }
-
+ 
 .bg-color{
     /* background-color: rgb(191, 215, 234); */
     background-color: #b6ffff;
 }
 
 .main{
-    background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    height: 86vh;
+}
 
+.main-bgImage{
+    background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png);
 }
 
 .blur{
     backdrop-filter: blur(8px);
 }
 
+.section-card{
+    border-radius: 12px;
+    background-color: black;
+    box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
+    padding: 15px;
+    margin: 10px;
+
+    h5{
+        color: black;
+        background-color: $color1;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    p{
+        color:whitesmoke;
+    }
+
+}
+
+.cardsContainer-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

@@ -1,4 +1,7 @@
-/* #hwrequest{
+$color1:#b6ffff;
+$color2: rgb(255, 64, 109);
+
+#hwrequest{
     background-color: red;
 }
 
@@ -25,8 +28,37 @@
     width: 250px;
 }
 
-#cart{
-    background-color: red;
+.grid-items-cart{
+    display: grid; 
+    grid-template-columns: 4fr 1fr; 
+    grid-template-rows: 0.3fr auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "btns btns"
+    "items cart";
+
+    .btns { 
+        grid-area: btns;
+    }
+
+    .items {
+        grid-area: items; 
+    }
+
+    .cart { 
+        grid-area: cart;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        color:$color1
+    }
+
+    .btn{
+        background-color: black !important;
+        color: $color2;
+    }
 }
 
- */
+
+
