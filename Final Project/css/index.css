@@ -7,6 +7,12 @@
   border-bottom: 3px solid black;
   height: 7vh; }
 
+.header__h1 {
+  text-decoration: none;
+  color: inherit; }
+  .header__h1 :hover {
+    color: rgba(255, 166, 0, 0.616); }
+
 .header__icon img {
   height: 40px; }
 
@@ -44,6 +50,68 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap; }
+
+.cards__container {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+
+.card__container-card {
+  background-color: #ffa600;
+  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  margin: 1rem; }
+  .card__container-card a {
+    text-decoration: none;
+    color: black;
+    display: inline; }
+    .card__container-card a :hover {
+      color: black; }
+
+.card-body {
+  padding: 1rem !important; }
+
+.card-img-top {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  height: 50%;
+  background-color: lightgrey; }
+
+.card-text {
+  text-align: center;
+  text-decoration: underline; }
+
+.contenedor {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center; }
+
+.box {
+  width: 200px;
+  height: 300px;
+  display: inline-block; }
+
+/* Grow Shadow */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform; }
+
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
 
 #hwrequest {
   background-color: red; }
@@ -154,13 +222,14 @@ body {
 
 #form-container {
   border-radius: 12px;
-  background-color: black;
+  background-color: #ffa600;
   box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.85);
   padding: 15px;
   height: fit-content;
   margin-top: 3rem; }
   #form-container input {
-    padding: 2px; }
+    padding: 0.2rem;
+    border-radius: 0.2rem; }
   #form-container #login-form {
     display: flex;
     flex-direction: column; }
@@ -173,7 +242,8 @@ body {
     border-color: #b6ffff;
     border-width: 2px; }
   #form-container h5 {
-    color: white;
+    color: black;
     margin: 10px 0px; }
   #form-container #alert-box h5 {
-    color: #a70707; }
+    color: black;
+    text-decoration: underline #d83232; }

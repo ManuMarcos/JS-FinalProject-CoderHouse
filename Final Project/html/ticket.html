@@ -12,7 +12,9 @@
 <body class="container-fluid bg-color">
     <header class = "row">
         <div class="col header">
-            <h1 class="header__h1">Portal de Tecnologia Informatica</h1>
+            <a class = "header__h1" href="./main.html">
+                <h1>Portal de Tecnologia Informatica</h1>
+            </a>
             <a class="header__icon" id="log-out" href="./index.html">
                 <img src="../imgs/logout.png" alt="">
             </a>
@@ -41,26 +43,26 @@
                                 <!-- Affair -->
                                 <div class="mb-3">
                                     <label name="ticketAffair" for="ticketAffair" class="form-label">Asunto</label>
-                                    <input id="ticketAffair" type="text" class="form-control" id="ticketAffair">
+                                    <input id="ticketAffair" type="text" class="form-control" id="ticketAffair" required>
                                 </div>
                                 <!-- Description -->
                                 <div class="mb-3">
                                     <label name="ticketDescription" for="ticketDescription" class="form-label">Descripcion</label>
-                                    <textarea id="ticketDescription" class="form-control" id="ticketDescription" rows="3"></textarea>
+                                    <textarea id="ticketDescription" class="form-control" id="ticketDescription" rows="3" required></textarea>
                                 </div>
                                 <!-- Finish Date -->
                                 <div class="mb-3">
                                     <label class="form-label" for="datePicker">Fecha de finalizacion</label>
-                                    <input name="ticketFinishDate" id="ticketFinishDate" class="form-control" type="date" id="datePicker">
+                                    <input name="ticketFinishDate" id="ticketFinishDate" class="form-control" type="date" id="datePicker" required>
                                 </div>
                                 <!-- Category -->
                                 <div class="mb-3">
                                     <label for="ticketCategory">Categoria</label>
-                                    <select name="ticketCategory" id="ticketCategory" class="form-select">
-                                        <option selected>-</option>
-                                        <option value="1">Cambio</option>
-                                        <option value="2">Incidente</option>
-                                        <option value="3">Capacitacion</option>
+                                    <select name="ticketCategory" id="ticketCategory" class="form-select" required>
+                                        <option value="">-</option>
+                                        <option value="cambio">Cambio</option>
+                                        <option value="incidente">Incidente</option>
+                                        <option value="capacitacion">Capacitacion</option>
                                     </select>
                                 </div>
                                 <!-- Modal Buttons (Cerrar, Guardar) -->

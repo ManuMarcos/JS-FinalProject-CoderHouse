@@ -11,26 +11,37 @@ function validarFormulario(event){
     let isValid = true;
     let alertBox = document.getElementById("alert-box")
 
+    //It could be a function
     if (userName.value.length === 0){
-        const alert = "<h5>No ingreso su nombre</h5>";
+        const alert = "<h5>No ingreso su nombre</h5>"; 
         alertText += alert;
         isValid = false;
     }
 
+    //It could be a function
     if (userSurname.value.length === 0){
-        const alert = "<h5>No ingreso su apellido</h5>"
+        const alert = "<h5>No ingreso su apellido</h5>" 
         alertText += alert;
         isValid = false;
     }
 
+    //It could be a function
     if (userPhone.value.length === 0 || userPhone.value.length > 4){
-        const alert = "<h5>El numero ingresado es incorrecto</h5>"
+        const alert = "<h5>El numero ingresado es incorrecto</h5>" 
         alertText += alert;
         isValid = false;
     }
 
+    //It could be a function
+    if (!userEmail.value.includes("@") || userEmail.value.length === 0){
+        const alert = "<h5>El correo ingresado es incorrecto</h5>" 
+        alertText += alert;
+        isValid = false;
+    }
+
+    //It could be a function
     if (userSector.value ==="none"){
-        const alert = "<h5>No ingreso su sector</h5>"
+        const alert = "<h5>No ingreso su sector</h5>" 
         alertText += alert;
         isValid = false;
     }

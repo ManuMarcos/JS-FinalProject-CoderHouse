@@ -9,6 +9,16 @@ $header-color: #b6ffff;;
     height: 7vh;
 }
 
+.header__h1{
+    text-decoration: none;
+    color: inherit;
+
+    :hover{
+        color: rgba(255, 166, 0, 0.616);
+    }
+}
+
+
 
 .header__icon img{
     height: 40px;
