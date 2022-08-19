@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 .header {
   display: flex;
   flex-direction: row;
@@ -7,10 +8,12 @@
   border-bottom: 3px solid black;
   height: 7vh; }
 
-.header__h1 {
+.header_link {
   text-decoration: none;
   color: inherit; }
-  .header__h1 :hover {
+  .header_link .header_link-title {
+    font-weight: bolder; }
+  .header_link :hover {
     color: rgba(255, 166, 0, 0.616); }
 
 .header__icon img {
@@ -26,7 +29,8 @@
   height: 86vh; }
 
 .main-bgImage {
-  background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png); }
+  /* background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png); */
+  background-image: url("../imgs/background-main.png"); }
 
 .blur {
   backdrop-filter: blur(8px); }
@@ -113,69 +117,92 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1); }
 
-#hwrequest {
-  background-color: red; }
+/* $color1:#b6ffff;
+$color2: rgb(255, 64, 109);
 
-#cards-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
+#hwrequest{
+    background-color: red;
+}
 
-.content-box {
-  margin: 20px 20px; }
-
-.category-buttons {
-  margin: 15px; }
-
-.card-img-top {
-  width: 230px; }
-
-.card {
-  margin: 20px;
-  width: 250px; }
-
-.grid-items-cart {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 0.3fr auto;
-  gap: 0px 0px;
-  grid-template-areas: "btns btns" "items cart"; }
-  .grid-items-cart .btns {
-    grid-area: btns; }
-  .grid-items-cart .items {
-    grid-area: items; }
-  .grid-items-cart .cart {
-    grid-area: cart;
+#cards-box{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    color: #b6ffff; }
-  .grid-items-cart .btn {
-    background-color: black !important;
-    color: #ff406d; }
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+.content-box{
+    margin: 20px 20px;
+}
+
+.category-buttons{
+    margin: 15px;
+}
+
+.card-img-top{
+    width: 230px;
+}
+
+.card{
+    margin: 20px;
+    width: 250px;
+}
+
+.grid-items-cart{
+    display: grid; 
+    grid-template-columns: 4fr 1fr; 
+    grid-template-rows: 0.3fr auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "btns btns"
+    "items cart";
+
+    .btns { 
+        grid-area: btns;
+    }
+
+    .items {
+        grid-area: items; 
+    }
+
+    .cart { 
+        grid-area: cart;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        color:$color1
+    }
+
+    .btn{
+        background-color: black !important;
+        color: $color2;
+    }
+}
+
+
+
+ */
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 7vh; }
-
-.footer__text {
-  margin-right: 20px; }
-
-.footer__list {
-  display: flex;
-  list-style: none;
-  padding: 0px;
-  margin: 0px; }
-
-.footer__list-item {
-  margin: 0.5rem; }
-
-.footer__list-icon svg {
-  height: 30px; }
+  height: 7vh;
+  box-shadow: -3px 1px 15px 5px rgba(0, 0, 0, 0.03); }
+  .footer .footer__text {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Dancing Script', cursive; }
+  .footer .footer__list {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px; }
+  .footer .footer__list-item {
+    margin: 0.5rem; }
+  .footer .footer__list-icon svg {
+    height: 30px; }
 
 .main__button {
   display: flex;
@@ -192,11 +219,81 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem; }
 
+.shop_nav {
+  margin-top: 1rem; }
+  .shop_nav button {
+    margin: 0.2rem;
+    border: 0px; }
+
+#shop_items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  gap: 0.5rem;
+  margin-top: 1rem; }
+
+.shop_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  background-color: white;
+  margin-bottom: 1rem; }
+  .shop_item .shop_item-img {
+    width: 11rem;
+    /* background-color: black; */
+    display: inherit;
+    align-self: center;
+    padding: 0.3rem; }
+  .shop_item .shop_item-title {
+    /* text-decoration: underline; */
+    font-weight: 600; }
+  .shop_item .shop_item-body {
+    /* background-color: #da7b08; */
+    display: inherit;
+    flex-direction: column;
+    padding: 1rem; }
+  .shop_item .shop_item-price {
+    align-self: flex-start;
+    margin-bottom: 0px;
+    margin-top: 0.5rem;
+    font-weight: 600; }
+  .shop_item .shop_item-brand {
+    font-size: medium; }
+  .shop_item .shop_item-model {
+    font-size: smaller; }
+  .shop_item .shop_item-btn {
+    background-color: black;
+    color: white;
+    margin-top: 1rem; }
+
+.cart {
+  padding: 0.2rem; }
+  .cart .cart_total-text {
+    font-weight: bold; }
+
+.cart_icon-container {
+  background-color: red;
+  display: flex;
+  justify-content: flex-end; }
+  .cart_icon-container a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; }
+  .cart_icon-container svg {
+    height: 4.3rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    /* display: inline-block; */ }
+    .cart_icon-container svg text {
+      font-size: 0.5rem; }
+
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Oswald', sans-serif;
-  font-size: large;
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box; }
 
 body {
@@ -218,12 +315,14 @@ body {
     color: $color2 !important;
 } */
 .bg-image-1 {
-  background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png); }
+  /* background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png); */
+  background-repeat: repeat;
+  background-image: url("../imgs/background-main.png"); }
 
 #form-container {
   border-radius: 12px;
-  background-color: #ffa600;
-  box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.85);
+  background-color: #da7b08;
+  /* box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85); */
   padding: 15px;
   height: fit-content;
   margin-top: 3rem; }
@@ -239,7 +338,7 @@ body {
     justify-self: center;
     background-color: whitesmoke;
     color: black;
-    border-color: #b6ffff;
+    border-color: #8ba6bc;
     border-width: 2px; }
   #form-container h5 {
     color: black;

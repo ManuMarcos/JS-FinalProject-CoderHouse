@@ -1,15 +1,14 @@
-@import "header", "main","hwrequest","footer","tickets","modal";
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import "header", "main","hwrequest","footer","tickets","modal", "shop";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-$color1:#b6ffff;
+$color1:#8ba6bc;
 $color2: rgb(255, 64, 109);
 
 //Reset CSS + Font styles
 * {
     margin: 0px;
     padding: 0px;
-    font-family:'Oswald', sans-serif;
-    font-size: large;
+    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
  }
 
@@ -41,13 +40,15 @@ $color2: rgb(255, 64, 109);
 } */
 
 .bg-image-1{
-    background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png);
+    /* background-image: url(https://www.pngmart.com/files/22/White-Background-PNG-Photos.png); */
+    background-repeat: repeat;
+    background-image: url("../imgs/background-main.png");
 }
 
 #form-container{
     border-radius: 12px;
-    background-color: rgba(255, 166, 0, 1);
-    box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85);
+    background-color: #da7b08;
+    /* box-shadow: 2px 3px 11px 0px rgba(0,0,0,0.85); */
     padding: 15px;
     height: fit-content;
     margin-top: 3rem ;

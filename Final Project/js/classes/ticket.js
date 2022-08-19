@@ -11,4 +11,5 @@ class Ticket{
         this.category = category;
     }
 
+    
 }

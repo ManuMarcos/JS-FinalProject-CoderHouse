@@ -1,0 +1,80 @@
+[
+    {
+        "categoria" : "pc",
+        "marca" : "dell",
+        "modelo" : "latitude 7420",
+        "id" : 1,
+        "nroDeSerie" : "iWgRr9Za",
+        "precio" : 290000,
+        "img": "https://arrichetta.com.ar/wp-content/uploads/2021/07/TGV89-3.jpg"
+    },
+    
+    {
+        "categoria" : "pc",
+        "marca" : "hp",
+        "modelo" : "probook 440",
+        "id" : 2,
+        "nroDeSerie" : "9BTuHNed",
+        "precio" : 180000,
+        "img": "https://www.computershopping.com.ar/Images/Productos/Grandes/HP-ProBook-440-G8_Foto3g.jpg"
+    },
+    
+    {
+        "categoria" : "mouse",
+        "marca" : "logitech",
+        "modelo" : "m280",
+        "id" : 3,
+        "nroDeSerie" : "7kPfkFkR",
+        "precio" : 1500,
+        "img": "https://logitechar.vteximg.com.br/arquivos/ids/156502-1000-1000/910-004284_1.png?v=636973474471400000"
+    },
+    
+    {
+        "categoria" : "mouse",
+        "marca" : "genius",
+        "modelo" : "dx-110",
+        "id" : 4,
+        "nroDeSerie" : "GwsZand8",
+        "precio" : 500,
+        "img": "https://tecnocompro.com/pub/media/catalog/product/cache/f2fda30fa08589bc3d50957538fec3cf/1/_/1_19.png"
+    },
+    
+    {
+        "categoria" : "teclado",
+        "marca" : "logitech",
+        "modelo" : "k120",
+        "id" : 5,
+        "nroDeSerie" : "A8xYzgGq",
+        "precio" : 1300,
+        "img": "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/k120/gallery/k120-gallery-01-uk.png"
+    },
+    
+    {
+        "categoria" : "teclado",
+        "marca" : "genius",
+        "modelo" : "kb-118",
+        "id" : 6,
+        "nroDeSerie" : "ygz6ScnT",
+        "precio" : 1500,
+        "img": "https://www.invidcomputers.com/images/0000000000412817000253332KB-118-P1-980x640-2.jpg"
+    },
+    
+    {
+        "categoria" : "monitor",
+        "marca" : "lg",
+        "modelo" : "22mn430h",
+        "id" : 7,
+        "nroDeSerie" : "kMcPi4Dc",
+        "precio" : 48000,
+        "img": "https://www.lg.com/ar/images/monitores/md07509130/gallery/D-1.jpg"
+    },
+    {
+        "categoria" : "monitor",
+        "marca" : "samsung",
+        "modelo" : "f390",
+        "id" : 8,
+        "nroDeSerie" : "W247RU5H",
+        "precio" : 45000,
+        "img": "https://images.samsung.com/is/image/samsung/es-curved-cf390-lc24f390fhuxen-001-front-black?$650_519_PNG$"
+    }
+]

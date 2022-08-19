@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 
 .footer{
     display: flex;
@@ -5,26 +7,38 @@
     justify-content: center;
     align-items: center;
     height: 7vh;
+    box-shadow: -3px 1px 15px 5px rgba(0,0,0,0.03);
+
+    .footer__text{
+        margin-right: 20px;
+        font-weight: bold;
+        font-size: x-large;
+        font-family: 'Dancing Script', cursive;
+    }
+
+    .footer__list{
+        display: flex;
+        list-style: none; 
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .footer__list-item{
+        margin: 0.5rem;
+    }
+
+    .footer__list-icon svg{
+        height: 30px;
+    }
 }
 
-.footer__text{
-    margin-right: 20px;
-}
 
-.footer__list{
-    display: flex;
-    list-style: none; 
-    padding: 0px;
-    margin: 0px;
-}
 
-.footer__list-item{
-    margin: 0.5rem;
-}
 
-.footer__list-icon svg{
-    height: 30px;
-}
+
+
+
+
 
 
 

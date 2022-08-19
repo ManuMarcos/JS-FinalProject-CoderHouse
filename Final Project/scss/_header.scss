@@ -9,16 +9,18 @@ $header-color: #b6ffff;;
     height: 7vh;
 }
 
-.header__h1{
+.header_link{
     text-decoration: none;
     color: inherit;
+
+    .header_link-title{
+        font-weight: bolder;
+    }
 
     :hover{
         color: rgba(255, 166, 0, 0.616);
     }
 }
-
-
 
 .header__icon img{
     height: 40px;
