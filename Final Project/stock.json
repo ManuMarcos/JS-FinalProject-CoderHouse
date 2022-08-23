@@ -1,0 +1,146 @@
+[
+    {   
+        "type":"hardware",
+        "category" : "pc",
+        "brand" : "dell",
+        "model_version" : "latitude 7420",
+        "id" : 1,
+        "price" : 290000,
+        "more_info":"-",
+        "img": "https://arrichetta.com.ar/wp-content/uploads/2021/07/TGV89-3.jpg"
+    },
+    
+    {   
+        "type":"hardware",
+        "category" : "pc",
+        "brand" : "hp",
+        "model_version" : "probook 440",
+        "id" : 2,
+        "price" : 180000,
+        "more_info":"-",
+        "img": "https://www.computershopping.com.ar/Images/Productos/Grandes/HP-ProBook-440-G8_Foto3g.jpg"
+    },
+    
+    {
+        "type":"hardware",
+        "category" : "mouse",
+        "brand" : "logitech",
+        "model_version" : "m280",
+        "id" : 3,
+        "price" : 1500,
+        "more_info":"-",
+        "img": "https://logitechar.vteximg.com.br/arquivos/ids/156502-1000-1000/910-004284_1.png?v=636973474471400000"
+    },
+    
+    {
+        "type":"hardware",
+        "category" : "mouse",
+        "brand" : "genius",
+        "model_version" : "dx-110",
+        "id" : 4,
+        "price" : 500,
+        "more_info":"-",
+        "img": "https://tecnocompro.com/pub/media/catalog/product/cache/f2fda30fa08589bc3d50957538fec3cf/1/_/1_19.png"
+    },
+    
+    {
+        "type":"hardware",
+        "category" : "teclado",
+        "brand" : "logitech",
+        "model_version" : "k120",
+        "id" : 5,
+        "price" : 1300,
+        "more_info":"-",
+        "img": "https://resource.logitech.com/content/dam/logitech/en/products/keyboards/k120/gallery/k120-gallery-01-uk.png"
+    },
+    {
+        "type":"hardware",
+        "category" : "teclado",
+        "brand" : "genius",
+        "model_version" : "kb-118",
+        "id" : 6,
+        "price" : 1500,
+        "more_info":"-",
+        "img": "https://www.invidcomputers.com/images/0000000000412817000253332KB-118-P1-980x640-2.jpg"
+    },
+    {
+        "type":"hardware",
+        "category" : "monitor",
+        "brand" : "lg",
+        "model_version" : "22mn430h",
+        "id" : 7,
+        "price" : 48000,
+        "more_info":"-",
+        "img": "https://www.lg.com/ar/images/monitores/md07509130/gallery/D-1.jpg"
+    },
+    {
+        "type":"hardware",
+        "category" : "monitor",
+        "brand" : "samsung",
+        "model_version" : "f390",
+        "id" : 8,
+        "price" : 45000,
+        "more_info" : "-",
+        "img": "https://images.samsung.com/is/image/samsung/es-curved-cf390-lc24f390fhuxen-001-front-black?$650_519_PNG$"
+    },
+    {
+        "type": "software",
+        "category" : "licencia",
+        "brand" : "outlook",
+        "model_version": "365-E1",
+        "id" : 200,
+        "price": 1250,
+        "more_info": "mensual",
+        "img" : "https://s3.us-west-2.amazonaws.com/saveonit-statics/catalog/product/o/f/office365e1-year.png"
+    },
+    {
+        "type" : "software",
+        "category": "licencia",
+        "brand" : "outlook",
+        "model_version": "365-E3",
+        "id" : 201,
+        "price": 2876,
+        "more_info": "mensual",
+        "img" : "https://xyzkeys.com/image/cache/catalog/Products/office%20365%20E3-500x500.jpg"
+    },
+    {
+        "type" : "software",
+        "category": "licencia",
+        "brand" : "outlook",
+        "model_version": "365-E5",
+        "id" : 202,
+        "price": 4752,
+        "more_info": "mensual",
+        "img" : "https://cheapproductkeys.com/wp-content/uploads/2020/08/Microsoft-Office-365-Pro-Plus-Product-Key-Lifetime.jpg"
+    },
+    {
+        "type" : "software",
+        "category": "licencia",
+        "brand" : "autocad",
+        "model_version": "autocad 2022",
+        "id" : 203,
+        "price": 1775,
+        "more_info": "anual",
+        "img" : "http://cdn.shopify.com/s/files/1/0650/3907/3511/products/autodesk-autocad-2022-x64-final-for-windows_60c0dcab0ca9f.jpg?v=1655031570"
+    },
+    {
+        "type" : "software",
+        "category": "licencia",
+        "brand" : "adobe",
+        "model_version": "Adobe Acrobat Pro DC",
+        "id" : 204,
+        "price": 952,
+        "more_info": "mensual",
+        "img" : "https://media.ldlc.com/r1600/ld/products/00/05/75/79/LD0005757945_1.jpg"
+    },
+    {
+        "type" : "software",
+        "category": "licencia",
+        "brand" : "adobe",
+        "model_version": "Adobe Standard DC",
+        "id" : 205,
+        "price": 852,
+        "more_info": "mensual",
+        "img" : "https://media.ldlc.com/r1600/ld/products/00/05/75/78/LD0005757883_1.jpg"
+    }
+]

@@ -267,11 +267,15 @@ $color2: rgb(255, 64, 109);
     background-color: black;
     color: white;
     margin-top: 1rem; }
+  .shop_item .shop_hardwareItem-btn {
+    background-color: green; }
 
 .cart {
   padding: 0.2rem; }
   .cart .cart_total-text {
     font-weight: bold; }
+  .cart .cart_removeItem {
+    cursor: pointer; }
 
 .cart_icon-container {
   background-color: red;

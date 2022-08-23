@@ -1,3 +1,4 @@
+import {Cart} from "./cart.js"
 export {Usuario};
 
 
@@ -5,21 +6,14 @@ export {Usuario};
 
 class Usuario{
     constructor(nombre, apellido, interno, email, sector){
-        /* this.nombre = nombre;
-        this.apellido = apellido;
-        this.interno = interno;
-        this.sector = sector;
-        this.equipos = argumentos[0];
-        this.licencias = argumentos[1];
-        this.tickets = argumentos[2] ; */
         this.nombre = nombre; 
         this.apellido = apellido;
         this.interno = interno;
         this.email = email;
         this.sector = sector;
-        this.equipos = [];
-        this.licencias = [];
         this.tickets = [];
+        this.cart;
+        this.assignedItems = [];
     }
 
     mostrarDatos(){
