@@ -70,9 +70,17 @@
     .cart_total-text{
         font-weight: bold;
     }
-
     .cart_removeItem{
         cursor: pointer;
+    }
+    #cart_empty-icon{
+        width: 50%;
+        margin-left: 25%;
+        height: auto;
+    }
+    #cart_empty-text{
+        margin-top: 1rem;
+        text-align: center;
     }
 }
 

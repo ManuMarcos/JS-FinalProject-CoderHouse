@@ -12,7 +12,7 @@ class Usuario{
         this.email = email;
         this.sector = sector;
         this.tickets = [];
-        this.cart;
+        this.cart = [];
         this.assignedItems = [];
     }
 

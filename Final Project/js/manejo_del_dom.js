@@ -1,5 +1,7 @@
 export {obtenerFormulario,renderTickets,renderStockItems,renderCart};
 import{capitalize} from "./capitalize.js"
+import {removeFromCart, addToCart} from "./shop.js"
+import {getUserLocalStorage} from "./local_storage.js";
 
 
 //Retorna el elemento formulario del DOM
@@ -8,21 +10,24 @@ function obtenerFormulario(){
     return formulario;
 }
 
-function renderTickets(){
-    const user = JSON.parse(localStorage.getItem("user"));
-
+function renderTickets(userTickets){
     const ticketContainer = document.getElementById("ticketsContainer")
+    
+    //Reset ticketsContainer
+    ticketContainer.innerHTML = "";
 
-    for (const ticket of user.tickets) {
+    for (const ticket of userTickets) {
         const ticketDom = document.createElement("tr");
+        const creationDate = new Date(ticket.creationDate);
         ticketDom.classList.add("main__table-row");
+        
 
         ticketDom.innerHTML = `
-        <td>${"N/A"}</td>
+        <td>${creationDate.getDate()}/${creationDate.getMonth() + 1}/${creationDate.getFullYear()} ${creationDate.getHours()}:${creationDate.getMinutes()}:${creationDate.getSeconds()}</td>
         <td>${capitalize(ticket.category)}</td>
         <td>${ticket.affair}</td>
-        <td>${"N/A"}</td>
-        <td>${"N/A"}</td>
+        <td>${capitalize(ticket.state)}</td>
+        <td>${capitalize(ticket.priority)}</td>
         `
 
         ticketContainer.append(ticketDom);
@@ -48,40 +53,53 @@ function renderStockItems(stockArray){
         </div>`;
         itemsShopContainer.append(card);
     });
+    const buttons = document.getElementsByClassName("shop_item-btn");
+    for (const button of buttons) {
+        button.addEventListener("click", (e) => addToCart(e), false)
+    }
 }
 
 function renderCart(userCart){
-    const cartItems = document.getElementById("cart_items")
-    const totalItems = document.getElementById("cart_icon-totalItems")
-    const totalValue = document.getElementById("cart_total-value")
-    const removeItem = document.getElementsByClassName("cart_removeItem")
+    const cartItemsDom = document.getElementById("cart_items")
+    const totalItemsDom = document.getElementById("cart_icon-totalItems")
+    const totalValueDom = document.getElementById("cart_total-value")
+    const removeItemButtons = document.getElementsByClassName("cart_removeItem")
 
-    for (const item of userCart.items) {
+    let totalPrice = 0;
+
+    //Reset cart DOM
+    cartItemsDom.innerHTML = "";
+
+    for (const item of userCart) {
         const row = document.createElement("tr");
+        
         row.innerHTML = `
         <th scope="row">${item.category}</th>
         <td>${item.brand}</td>
         <td>${item.model_version}</td>
         <td>${item.price}</td>
         <td>
-            <a data-id=${item.id} class="cart_removeItem">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash" viewBox="0 0 16 16">
-                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                </svg>
-            </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <a data-id=${item.id} class="cart_removeItem">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>   
+                </a>
+            </svg> 
         </td>
         `
-        cartItems.append(row);
+        totalPrice += item.price;
+        cartItemsDom.append(row);
     }
-    for (const button of removeItem) {
-        button.addEventListener("click", (e) => {
-            console.log(e.target.parentElement)
-            alert(`Se quiere eliminar el item ${e.target.parentElement.dataset.id}`)
-        })
+    
+    //Add eventlistener to remove item buttons
+    for (const button of removeItemButtons) {
+        button.addEventListener("click", (e) => removeFromCart(e));
     }
-    totalItems.textContent = `${userCart.totalItems}`;
-    totalValue.textContent = `$${userCart.totalValue}`
+
+    //Show total items in cart
+    totalItemsDom.textContent = `${userCart.length}`;
+    //Show total price
+    totalValueDom.textContent = `$${totalPrice}`
 }
+
 
 

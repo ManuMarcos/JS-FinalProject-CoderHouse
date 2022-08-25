@@ -1,6 +1,7 @@
-import {Ticket} from "../js/classes/ticket.js"
-import {Usuario} from "../js/classes/usuario.js"
-import {renderTickets} from "./manejo_del_dom.js"
+import {Ticket} from "../js/classes/ticket.js";
+import {renderTickets} from "./manejo_del_dom.js";
+import {getUserLocalStorage,setUserLocalStorage} from "./local_storage.js";
+
 
 
 function createTicket(){
@@ -21,21 +22,24 @@ function createTicket(){
 
         const newTicket = new Ticket(ticketAffair.value, ticketDescription.value, ticketFinishDate.value, ticketCategory.value)
 
-        let localStorageUser = JSON.parse(localStorage.getItem("user"));
+        let localStorageUser = getUserLocalStorage();
 
         localStorageUser.tickets.push(newTicket);
 
         console.log(localStorageUser);
 
-        localStorage.setItem("user", JSON.stringify(localStorageUser));
+        renderTickets(localStorageUser.tickets);
+
+        setUserLocalStorage(localStorageUser);
         
-        sentEmail(localStorageUser.nombre, localStorageUser.email,  newTicket.affair, newTicket.description, newTicket.finishDate, newTicket.category);
+        /* sentEmail(localStorageUser.nombre, localStorageUser.email,  newTicket.affair, newTicket.description, newTicket.finishDate, newTicket.category); */
         
         ticketForm.reset();
 
-        /* location.reload(); */
         
 
+        /* location.reload(); */
+        
     })
 }
 
@@ -61,5 +65,11 @@ function sentEmail(userName, userEmail, ticketAffair, ticketDescription, ticketF
 }
 
 /* ------------------------------------RUN-------------------------------------------------- */
+let user = getUserLocalStorage();
+renderTickets(user.tickets);
 createTicket();
-renderTickets();
+
+
+let todayDate = new Date();
+console.log(todayDate);
+console.log(todayDate.getTime());

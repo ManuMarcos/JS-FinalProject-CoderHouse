@@ -276,6 +276,13 @@ $color2: rgb(255, 64, 109);
     font-weight: bold; }
   .cart .cart_removeItem {
     cursor: pointer; }
+  .cart #cart_empty-icon {
+    width: 50%;
+    margin-left: 25%;
+    height: auto; }
+  .cart #cart_empty-text {
+    margin-top: 1rem;
+    text-align: center; }
 
 .cart_icon-container {
   background-color: red;
