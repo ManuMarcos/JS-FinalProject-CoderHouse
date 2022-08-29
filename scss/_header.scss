@@ -10,13 +10,12 @@ $header-color: #b6ffff;;
 }
 
 .header_link{
+    color:black;
     text-decoration: none;
-    color: inherit;
-
+    
     .header_link-title{
         font-weight: bolder;
     }
-
     :hover{
         color: rgba(255, 166, 0, 0.616);
     }

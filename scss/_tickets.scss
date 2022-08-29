@@ -1,0 +1,42 @@
+.main__button{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+}
+
+.btn-container{
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+}
+
+#generateTicket{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.table{
+    margin-top: 1rem;
+}
+
+
+.ticket_icon-container{
+    background-color: red;
+    display: flex;
+    justify-content: flex-end;
+    
+    a{
+        text-decoration: none;
+        color:inherit;
+        cursor: pointer;
+    }
+    
+    svg{
+        height: 3.5rem;
+        position:fixed;
+        bottom: 5vh;
+        right: 2rem;
+    }
+    
+}

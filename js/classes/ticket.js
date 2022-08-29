@@ -23,14 +23,13 @@ class Ticket{
 
 
     setDate(){
-        const todayDate = Date();
-        return `${todayDate}`;
+        const currentDate = Date();
+        return currentDate;
     }
 
     setPriority(){
-        const todayDateinTime = new Date().getTime();
-        console.log(todayDateinTime);
-        const diffInTime = this.finishDate.getTime() - todayDateinTime;
+        const currentDateInTime = new Date().getTime();
+        const diffInTime = this.finishDate.getTime() - currentDateInTime;
         const diffInDays = diffInTime / (1000 * 3600 * 24);
 
         if (diffInDays < 2){

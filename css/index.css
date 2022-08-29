@@ -9,8 +9,8 @@
   height: 7vh; }
 
 .header_link {
-  text-decoration: none;
-  color: inherit; }
+  color: black;
+  text-decoration: none; }
   .header_link .header_link-title {
     font-weight: bolder; }
   .header_link :hover {
@@ -219,11 +219,54 @@ $color2: rgb(255, 64, 109);
   margin-top: 0.5rem;
   margin-bottom: 0.5rem; }
 
+.table {
+  margin-top: 1rem; }
+
+.ticket_icon-container {
+  background-color: red;
+  display: flex;
+  justify-content: flex-end; }
+  .ticket_icon-container a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; }
+  .ticket_icon-container svg {
+    height: 3.5rem;
+    position: fixed;
+    bottom: 5vh;
+    right: 2rem; }
+
 .shop_nav {
   margin-top: 1rem; }
-  .shop_nav button {
-    margin: 0.2rem;
-    border: 0px; }
+
+/*   .button{
+        background-color: black;
+        color: white;
+        margin: 0.2rem;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
+
+        
+
+        &:focus{
+            background-color: red;
+        }
+        
+
+    } */
+#button_show-myItems {
+  background-color: black;
+  font-weight: bold; }
+  #button_show-myItems:active {
+    border-color: inherit; }
+  #button_show-myItems:hover {
+    background-color: #ffa600;
+    color: black;
+    font-weight: bold; }
+
+#offcanvasLabel {
+  text-decoration: underline;
+  font-weight: bold; }
 
 #shop_items {
   display: flex;
@@ -238,7 +281,7 @@ $color2: rgb(255, 64, 109);
   flex-direction: column;
   justify-content: space-between;
   width: fit-content;
-  background-color: white;
+  background-color: #faf9f6;
   margin-bottom: 1rem; }
   .shop_item .shop_item-img {
     width: 11rem;
@@ -301,11 +344,32 @@ $color2: rgb(255, 64, 109);
     .cart_icon-container svg text {
       font-size: 0.5rem; }
 
+.offcanvas {
+  background-color: #faf9f6; }
+
+#assignedItemsTable {
+  background-color: whitesmoke; }
+
+.empty_cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .empty_cart svg {
+    width: 30%;
+    height: auto; }
+  .empty_cart h5 {
+    margin-top: 2rem; }
+
 * {
   margin: 0px;
   padding: 0px;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box; }
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit; }
 
 body {
   min-height: 100vh; }

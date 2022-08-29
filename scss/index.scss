@@ -12,8 +12,13 @@ $color2: rgb(255, 64, 109);
     box-sizing: border-box;
  }
 
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+}
 
- body{
+
+body{
     min-height: 100vh;
  }
 

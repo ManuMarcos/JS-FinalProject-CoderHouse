@@ -26,17 +26,14 @@ function createTicket(){
 
         localStorageUser.tickets.push(newTicket);
 
-        console.log(localStorageUser);
+        sentEmail(localStorageUser.nombre, localStorageUser.email,  newTicket.affair, newTicket.description, newTicket.finishDate, newTicket.category);
 
         renderTickets(localStorageUser.tickets);
 
         setUserLocalStorage(localStorageUser);
-        
-        /* sentEmail(localStorageUser.nombre, localStorageUser.email,  newTicket.affair, newTicket.description, newTicket.finishDate, newTicket.category); */
-        
-        ticketForm.reset();
 
         
+        /* ticketForm.reset(); */
 
         /* location.reload(); */
         
@@ -45,20 +42,19 @@ function createTicket(){
 
 
 
-function sentEmail(userName, userEmail, ticketAffair, ticketDescription, ticketFinishDate, ticketCategory){
+async function sentEmail(userName, userEmail, ticketAffair, ticketDescription, ticketFinishDate, ticketCategory){
     var templateParams = {
         to_name: userName,
         to_email: userEmail,
         ticketAffair,
         ticketDescription,
-        ticketFinishDate,
+        ticketFinishDate : `${ticketFinishDate.getDate()}/${ticketFinishDate.getMonth() + 1}/${ticketFinishDate.getFullYear()}`,
         ticketCategory
     };
      
     emailjs.send('service_rpneddl', 'template_qwdr0tp', templateParams)
         .then(function(response) {
            console.log('SUCCESS!', response.status, response.text);
-           alert("Se te ha enviado un correo a tu casilla con los datos del ticket")
         }, function(error) {
            console.log('FAILED...', error);
         });
@@ -69,7 +65,3 @@ let user = getUserLocalStorage();
 renderTickets(user.tickets);
 createTicket();
 
-
-let todayDate = new Date();
-console.log(todayDate);
-console.log(todayDate.getTime());

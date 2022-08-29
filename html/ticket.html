@@ -23,11 +23,11 @@
     <main class="row">
         <div class="main col">
             <!-- Button trigger modal -->
-            <div class="btn-container">
+            <!-- <div class="btn-container">
                 <button type="button" id="generateTicket" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#newTicketModal">
                     Generar Ticket
                 </button>
-            </div>
+            </div> -->
             
             <!-- Modal -->
             <div class="modal fade" id="newTicketModal" tabindex="-1" >
@@ -68,16 +68,16 @@
                                 <!-- Modal Buttons (Cerrar, Guardar) -->
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button id="newTicketBtn" type="submit" class="btn btn-primary">Guardar</button>
+                                    <button id="newTicketBtn" type="submit" data-bs-dismiss="modal" class="btn btn-primary">Guardar</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <table class="table main__table">
+            <table class="table table-hover main__table">
                 <thead>
-                    <tr class="main__table-row">
+                    <tr class="main__table-row table-dark">
                         <th scope="col">Fecha de Creacion</th>
                         <th scope="col">Categoria</th>
                         <th scope="col">Asunto</th>
@@ -90,6 +90,15 @@
             </table>
         </div>
     </main>
+    <aside>
+        <div class="ticket_icon-container">
+            <a data-bs-toggle="modal" data-bs-target="#newTicketModal">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                </svg>
+            </a>
+        </div>
+    </aside>
     <footer class="row">
         <div class="col footer">
             <span class="footer__text">Sitio creado por ManuMarcos</span>

@@ -22,31 +22,31 @@
         </div>
         
     </header>
-    <aside>
-        
-    </aside>
     <main class="container">
         
         <div class="row shop">
-            <nav class="shop_nav d-flex flex-row flex-lg-column col-12 col-lg-3">
-                <button class="btn btn-danger" type="button">Todos</button>
-                <button class="btn btn-danger" type="button">Hardware</button>
-                <button class="btn btn-danger" type="button">Software</button>
-                
+            <nav class="buttons_filter shop_nav d-flex flex-row flex-lg-column col-12 col-lg-3">
+                <button class="btn btn-primary" id="button_show-myItems" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Mis items asignados</button>
             </nav>
             <section id="shop_items" class="col-12 col-lg-9 d-flex flex-wrap">
 
             </section>
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="cart_modal" tabindex="-1" aria-labelledby="cart_modal-label" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                  <h5 class="modal-title" id="cart_modal-label">Carrito</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="cart modal-body">
-                    <table class="table">
+                <div class="cart modal-body" id="cart_table-container">
+                    <div class="empty_cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z"/>
+                        </svg>
+                        <h5>No tenes items en el carrito</h5>
+                    </div>
+                    <table class="table hide" id="cart_table">
                         <thead class="table-dark">
                             <tr>
                             <th scope="col">Categoria</th>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Confirmar pedido</button>
+                  <button type="button" id="cart_btn-confirm" class="btn btn-primary">Confirmar pedido</button>
                 </div>
               </div>
             </div>
@@ -79,13 +79,37 @@
     </main>
     <aside>
         <div class="cart_icon-container">
-            <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a data-bs-toggle="modal" data-bs-target="#cart_modal">
                 <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                    <text id="cart_icon-totalItems" x="52%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white">0</text>
+                    <text id="cart_icon-totalItems" x="52%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white"></text>
                 </svg>
             </a>
         </div>
+    </aside>
+    <aside>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h4 class="offcanvas-title" id="offcanvasLabel">Items asignados</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <table class="table" id="assignedItemsTable">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody id="assignedItemsBody">
+                </tbody>
+              </table>
+              <div>
+                Para solicitar un cambio o devolucion de los items asignados debes generar un ticket o comunicarte con TI mediante portalti@outlook.es
+              </div>
+          </div>
     </aside>
     <footer class="row">
         <div class="col footer">

@@ -1,11 +1,12 @@
-$color1:#b6ffff;
 
+$color1:#b6ffff;
+$color2: rgba(255, 166, 0, 1);
 /* 
  */
  
 .bg-color{
     /* background-color: rgb(191, 215, 234); */
-    background-color: #b6ffff;
+    background-color: $color1;
 }
 
 .main{
