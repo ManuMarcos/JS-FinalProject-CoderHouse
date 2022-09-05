@@ -38,5 +38,5 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 
 ## Tecnologias utilizadas
-<img src="http://www.cursosgis.com/wp-content/uploads/2017/06/lenguajes_1.png" width="300"/>
+<img align ="center" src="http://www.cursosgis.com/wp-content/uploads/2017/06/lenguajes_1.png" width="300"/>
 
