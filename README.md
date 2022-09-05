@@ -38,4 +38,4 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 
 ## Tecnologias utilizadas
-[<i class="fa-brands fa-html5"></i>]
+[![HTML][HTML5]][HTML-url]
