@@ -27,7 +27,7 @@ Los usuarios podran generar tickets, estos tendran los campos:
         + Incidente
         + Capacitacion
 
-Una vez completados los campos se genera el ticket asignandole el estado abierto y una prioridad dependiendo de los que faltan para la fecha de finalizacion: 
+Una vez completados los campos se genera el ticket asignandole el estado abierto y una prioridad dependiendo de los dias que falten para la fecha de finalizacion: 
 
     - Alta: Menos de dos dias
     - Media: Entre 2 y 10 dias
