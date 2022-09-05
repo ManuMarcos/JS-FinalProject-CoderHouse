@@ -39,5 +39,5 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 ## Tecnologias utilizadas
 ![html](https://cdn-icons-png.flaticon.com/512/919/919827.png)
-<img src="https://w7.pngwing.com/pngs/585/981/png-transparent-html-js-and-css-logo-cascading-style-sheets-javascript-html-css3-jquery-logo-miscellaneous-text-trademark.png" width="128"/>
+<img src="http://www.cursosgis.com/wp-content/uploads/2017/06/lenguajes_1.png" width="128"/>
 
