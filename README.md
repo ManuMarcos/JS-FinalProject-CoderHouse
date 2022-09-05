@@ -38,4 +38,4 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 
 ## Tecnologias utilizadas
-[![HTML][HTML5]][HTML-url]
+![html](https://www.flaticon.es/icono-gratis/html-5_919827)
