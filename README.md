@@ -3,6 +3,7 @@
 Este portal le permite a los usuarios:
 - Solicitar hardware/software 
 - Generar tickets
+
 al Departamento de Informatica en una empresa
 
 
