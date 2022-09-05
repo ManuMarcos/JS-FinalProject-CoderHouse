@@ -10,7 +10,7 @@ al Departamento de Informatica en una empresa
 
 ## Solicitar Hardware/Software
 
-- Cada usuario podra tener asignado un item de cada categoria (Pc, Mouse, Teclado, Monitor)
+- Cada usuario podra tener asignado solo un item de las categorias (Pc, Mouse, Teclado, Monitor)
 - Para la categoria Licencia, solo se podra tener asignado una licencia para cada software. Por ejemplo (Office, Autocad, etc)
 - Una vez que el usuario confirme los items, estos se asignaran y se podran visualizar desde el apartado "Mis items asignados"
 - En caso de que el usuario quiera efectuar un cambio o modificacion sobre sus items asignados debe comunicarse mediante portalti@outlook.es
