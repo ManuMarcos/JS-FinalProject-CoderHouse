@@ -39,3 +39,4 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 ## Tecnologias utilizadas
 ![html](https://cdn-icons-png.flaticon.com/512/919/919827.png)
+<img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" width="128"/>
