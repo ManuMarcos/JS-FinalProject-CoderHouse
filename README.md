@@ -39,5 +39,5 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 ## Tecnologias utilizadas
 ![html](https://cdn-icons-png.flaticon.com/512/919/919827.png)
-<img src="https://www.pngfind.com/pngs/m/683-6834215_html-css-js-icon-hd-png-download.png" width="128"/>
+<img src="https://w7.pngwing.com/pngs/585/981/png-transparent-html-js-and-css-logo-cascading-style-sheets-javascript-html-css3-jquery-logo-miscellaneous-text-trademark.png" width="128"/>
 
