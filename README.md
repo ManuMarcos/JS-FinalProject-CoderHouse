@@ -16,6 +16,12 @@ al Departamento de Informatica en una empresa
 - En caso de que el usuario quiera efectuar un cambio o modificacion sobre sus items asignados debe comunicarse mediante portalti@outlook.es
 - Un ejemplo del hardware/software asignado a un usuario es el siguiente:
 ![App Screenshot](https://www.plantuml.com/plantuml/png/VT7VQzim40Vmz_ihX1y76PPiTqbX9INDHbZQZBLz7efyf5hr8qZdmIZztoVRmvvhg9vy9ztdA-5r91ceiGR07t-X8hOZjFaB78DqzINBRj2O39GaFFdm9pM-RpBGQOU3zJMQdxynHErTsjbBqjJKo3wL8i_W7BJ2IoPMULhm-h_FH_zUsjYuqoJYzd2tUpZyw7EMivmlnMhaosgcYr7_YautSO8_R3Vxwvj3Zr_Cy6_71UVBWUVLMxqOzRq_QKBrzERoZ_VRNYzc-grOvk_OvMWV6ZBUFq_e_MwplTlihdjTvFdCBowgnPQF2Q9g4m2iF3CPepuvhDkW-08iPnyML_tl1iQ7WWCJGo605KDH02k7eXpSnuWXSSxROq3s-IgzKhe6JGPCdj4ONVj_tQ1yJ5tj28FhcYjULC3GIcswCxQRJDUKIdlR3QoVFBNx7vMtQJYY8X-wmwGpcBwgkzsa0uoqUaQAxGGm9GDrNw_GhpMwkh7cBm00)
+- Preguntas frecuentes:
+    
+    -¿Por que no puedo agregar mas items al carrito?
+    En este caso pueden suceder dos cosas:
+    1. Estas intentando agregar un item de las categorias (PC, Mouse, Teclado, Monitor) (o una licencia de un software) que ya tenes en el carrito.
+    2. Estas intentando agregar un item de las categorias (PC, Mouse, Teclado, Monitor) (o una licencia de un software) que ya tenes asignado, en este caso debes           comunicarte con portalti@outlook.es
 
 ## Generar Ticket
 Los usuarios podran generar tickets, estos tendran los campos:
