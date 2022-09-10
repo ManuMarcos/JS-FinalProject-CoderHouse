@@ -39,8 +39,9 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 
 ## Tecnologias utilizadas
-[![Js][Js.js]][Js-url]
-[![Js][html.js]][html-url]
+[![Js][Js.logo]][Js-url]
+[![Html][html.logo]][html-url]
+[![Css][css.logo]][css-url]
 
 
 <img src="http://www.cursosgis.com/wp-content/uploads/2017/06/lenguajes_1.png" width="300"/>
@@ -49,9 +50,10 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[Js.js]: https://img.shields.io/badge/-JavaScript-%23edc730?style=for-the-badge&logo=javascript&logoColor=black
+[Js.logo]: https://img.shields.io/badge/-JavaScript-%23edc730?style=for-the-badge&logo=javascript&logoColor=black
 [Js-url]: https://www.javascript.com/
-[html.js]: https://img.shields.io/badge/-HTML-%23ff5730?style=for-the-badge&logo=html5&logoColor=white
+[html.logo]: https://img.shields.io/badge/-HTML-%23ff5730?style=for-the-badge&logo=html5&logoColor=white
 [html-url]: https://developer.mozilla.org/es/docs/Web/HTML
-
+[css.logo]:https://img.shields.io/badge/CSS-%23046cc4?style=for-the-badge&logo=css3
+[css-url]:https://developer.mozilla.org/es/docs/Web/CSS
 
