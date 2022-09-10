@@ -43,6 +43,7 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 [![Html][html.logo]][html-url]
 [![Css][css.logo]][css-url]
 [![Email.js][emailJs.logo]][emailJs-url]
+[![Sass][sass.logo]][sass-url]
 
 
 
@@ -56,3 +57,5 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 [css-url]:https://developer.mozilla.org/es/docs/Web/CSS
 [emailJs.logo]: https://img.shields.io/badge/-EmailJS-%23ffffff?style=for-the-badge&logo=minutemailer&logoColor=yellow
 [emailJs-url]: https://www.emailjs.com/
+[sass.logo]: https://img.shields.io/badge/-SASS-%20%23d46b9b%20?style=for-the-badge&logo=sass&logoColor=white
+[sass-url]: https://sass-lang.com/
