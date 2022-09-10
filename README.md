@@ -19,6 +19,7 @@ al Departamento de Informatica en una empresa
 - Preguntas frecuentes:
     
     -¿Por que no puedo agregar mas items al carrito?
+    
     En este caso pueden suceder dos cosas:
     1. Estas intentando agregar un item de las categorias (PC, Mouse, Teclado, Monitor) (o una licencia de un software) que ya tenes en el carrito.
     2. Estas intentando agregar un item de las categorias (PC, Mouse, Teclado, Monitor) (o una licencia de un software) que ya tenes asignado, en este caso debes           comunicarte con portalti@outlook.es
