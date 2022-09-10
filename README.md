@@ -48,6 +48,6 @@ Se le enviara un correo electronico al usuario con todos los datos del ticket ge
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[Js.js]: https://www.flaticon.es/icono-gratis/js_5968292?term=javascript&page=1&position=1&page=1&position=1&related_id=5968292&origin=search
+[Js.js]: https://img.shields.io/badge/-JavaScript-%23edc730?style=for-the-badge&logo=javascript&logoColor=black
 [Js-url]: https://www.javascript.com/
 
